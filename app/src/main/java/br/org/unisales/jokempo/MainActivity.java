@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (j1=="Pedra" && j2 =="Tesoura") {
             desisao="Ganhou";
         } else if (j1=="Pedra" && j2 =="Papel") {
-            desisao="Pedeu";
+            desisao="Perdeu";
         } else if (j1=="Papel" && j2 =="Pedra") {
             desisao="Ganhou";
         }else if (j1=="Papel" && j2 =="Tesoura") {
@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
     public void btnPedra(View v) {
         TextView resultado = findViewById(R.id.textView3);
         escolha = "Pedra";
+        ImageView imageJogador = findViewById(R.id.imageView5);
+        imageJogador.setImageResource(R.drawable.pedra);
         String oponete =  escolhaMac();
         resultado.setText(regras(escolha,oponete));
     }
@@ -74,12 +76,16 @@ public class MainActivity extends AppCompatActivity {
     public void btnPapel(View v) {
         TextView resultado = findViewById(R.id.textView3);
         escolha = "Papel";
+        ImageView imageJogador = findViewById(R.id.imageView5);
+        imageJogador.setImageResource(R.drawable.papel);
         String oponete =  escolhaMac();
         resultado.setText(regras(escolha,oponete));
     }
     public void btnTesoura(View v) {
         TextView resultado = findViewById(R.id.textView3);
         escolha = "Tesoura";
+        ImageView imageJogador = findViewById(R.id.imageView5);
+        imageJogador.setImageResource(R.drawable.tesoura);
         String oponete =  escolhaMac();
         resultado.setText(regras(escolha,oponete));
     }
